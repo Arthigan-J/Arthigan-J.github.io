@@ -1,0 +1,675 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    background-color: #2d283e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+
+}
+
+.hero-header {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #2d283e;
+}
+
+.wrapper {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 20px 40px; /* Adjust spacing for padding */
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    color: #fff; /* White text for contrast */
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Sticks to the top */
+    z-index: 1000; /* Ensures it's above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+  }
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #802bb1;
+    border-radius: 50%;
+    color: #d1d7e0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 45px; /* Centers the icon text vertically */
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #d1d7e0;
+}
+
+nav .navlinks {
+    list-style: none;
+    display: flex; /* Ensures horizontal alignment by default */
+    gap: 20px; /* Spacing between nav links */
+    margin: 0;
+    padding: 0;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks a {
+    position: relative;
+    text-decoration: none;
+    color: #d1d7e0;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navlinks a::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #802bb1;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.2s;
+    pointer-events: none;
+}
+
+.navlinks a:hover::after {
+    width: 100%;
+}
+
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%; /* Center relative to the parent */
+    transform: translateY(-50%); /* Adjust alignment to true center */
+    right: 3%; /* Keep it to the right */
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span{
+    display: block;
+    background-color: #802bb1;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity; 
+} 
+
+nav .navlinks {
+    list-style-type: none;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}  
+
+nav .navlinks li a{
+    color: #d1d7e0;
+    margin-right: 2.5rem; 
+}
+
+.container {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .hero-pic {
+    width: 40%;
+    height: 40%;
+    border-radius: 5%;
+    overflow: hidden;
+    border: 15px solid #564f6f;
+    box-shadow: 5px 7px 25px rgba(45, 40, 62, 0.5);
+}
+
+.hero-pic img {
+    height: 100%;
+    width: 100%;
+    display:block;
+    transition: 0.5s;
+}
+
+.hero-pic {
+    display:block;
+    transition: 0.5s;
+}
+
+.hero-pic:hover{
+    transform: scale(1.1);
+}
+
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h5 {
+    color: #d1d7e0;
+    font-size: 14px;
+}
+
+.hero-text h5 span{
+    color: #802bb1;
+    font-size: 16px;
+}
+
+h1 {
+    color: #802bb1;
+    font-size: 3rem;
+}
+
+p {
+    color: #d1d7e0;
+}
+
+h2 {
+    color: #9682b8;
+}
+
+.btn-group {
+    margin: 45px 0;
+}
+
+.btn-group .btn {
+    display: inline-block;
+    border-color: #4c495d;
+    color: #d1d7e0;
+    background-color: #564f6f;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 4px solid #d1d7e0;
+    box-shadow: 0 10px 10px -8px rgb(45 40 62 / 78%);
+    transition: all 0.4s; /* Smooth transition for hover effect */
+}
+
+.btn.active {
+    border-color: #802bb1;
+}
+
+/* Hover effect for .btn.active */
+.btn.active:hover {
+    transform: scale(1.2); /* Increase size on hover */
+    background-color: #6a5c8d; /* Optional: change background color */
+}
+
+.hero-text .social i{
+    color: #d1d7e0;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.hero-text .social i:hover{
+    color: #802bb1;
+    transform: rotate(360deg);
+}
+
+
+/*Education*/
+#education {
+    text-align: center; /* Center-align text */
+    padding: 40px; /* Add some padding for spacing */
+    flex-wrap: wrap;
+}
+
+.container-2 {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
+    gap: 10px; /* Small gap between each education block */
+    max-width: 800px; /* Optional: Limit width for better readability */
+    margin: 0 auto; /* Center the content within the page */
+}
+
+.education-row-1, .education-row-2 {
+    text-align: center; 
+    padding: 10px; /* Add space inside each block */
+    width: 95%; /* Adjust the width */
+}
+
+#portfolio {
+    margin-top: 0; /* Add space above */
+    margin-bottom: 20px; /* Add space below */
+    padding: 0; /* No internal padding */
+}
+
+.container-3 {
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows cards to wrap onto the next row if needed */
+    width: 100%; /* Ensure the container spans the available space */
+    max-width: 100%; /* Prevent overflow issues */
+}
+
+.container-2 h1, .container-3 h1, .container-4 h1, .container-5 h1 {
+    font-size: 2.5rem;
+    display: block;
+    width: 100%; /* Ensure the heading spans the full width of the container */
+    flex-basis: 100%; /* Important for flexbox containers */
+    text-align: center;
+}
+
+.card {
+    width: 325px; /* Set a consistent width for cards */
+    border-radius: 8px;
+    overflow: hidden;
+    border-width: 10px;
+    border-color: #564f6f;
+    border-style: solid;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+strong {
+    font-weight: bold;
+    color: #d1d7e0; /* Optional: Change text color */
+}  
+
+.card img {
+    width: 100%; /* Ensure the image spans the full width of the card */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crop the image to fill the space while keeping the aspect ratio */
+    display: block;
+    border-bottom: 5px solid #564f6f; /* Optional: Visual separation from the rest of the card */
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #9682b8;
+}
+
+.card-content p{
+    color: #d1d7e0;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.container-4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows cards to wrap onto the next row if needed */
+    margin-top: 100px;
+    width: 100%; /* Ensure the container spans the available space */
+    max-width: 100%; /* Prevent overflow issues */
+}   
+
+.skills {
+    background: #2d283e;
+    text-align: center;
+}
+
+.skills h1 {
+    padding-top: 6rem;
+}
+
+.skills .container-4 {
+    color: #d1d7e0;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.skills .container-4 .row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Default for larger screens */
+    flex-wrap: (wrap);
+    gap: 1.8rem;
+}
+
+.skills .container-4 .bar{
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    background: #564f6f;    
+    box-shadow: 0 4px 10px black;
+    transition: 0.4s;
+}
+
+.skills .container-4 .bar:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+
+}
+
+.skills .container-4 .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills .container-4 .bar .info .span {
+    font-weight: 500px;
+}
+
+.contact {
+    min-height: 100vh;
+    background-color: #2d283e;
+    padding: 50px;
+    text-align: center;
+}
+
+.container-5 {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.container-5 h1 {
+    padding-top: 8rem;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.contact-form {
+    text-align: left;
+
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #9682b8;
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+}
+
+input, textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #564f6f;
+    color: #d1d7e0;
+}
+
+input:focus, 
+textarea:focus{
+    outline: none;
+    box-shadow: 0 0 8px black;
+}
+
+.submit {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #6a5c8d;
+    color: #d1d7e0;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.submit:hover {
+    color: #9682b8;
+    background-color: #d1d7e0;
+}
+
+.contact-info{
+    text-align: left;
+}
+
+.contact-info h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #9682b8;
+
+}
+
+.contact-info p{
+    margin-bottom: 10px;
+    color: #d1d7e0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+
+/* Responsive design & displaying navbar for small screen */
+
+@media (max-width: 930px) {
+    nav .togglebtn {
+        display: initial; /* Make the hamburger icon visible */
+    }
+
+    /* For toggle button */
+    .click {
+        top: 45px;
+    }
+
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    /* Mobile navlinks style */
+    nav .navlinks {
+        position: absolute;
+        top: 110px;
+        right: -100%; /* Hide off-screen by default */
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #2d283e;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0;
+        display: flex; /* Ensure the flexbox model */
+        flex-direction: column; /* Stack items vertically in mobile form */
+        justify-content: flex-start; /* Align items at the top */
+    }
+
+    nav .navlinks li {
+        display: block; /* Make list items block elements so they stack vertically */
+    }
+
+    nav .navlinks li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* Show the navlinks when the .open class is added */
+    nav .navlinks.open {
+        right: 0; /* Slide the menu in */
+    }
+}
+
+@media(max-width:768px)
+{
+    .container{
+        flex-direction: column;
+        padding-top:2rem
+    }
+    .hero-text{
+        padding:40px 0px;
+    }
+}
+
+/* Media query for tablets (screen width <= 768px) */
+@media (max-width: 768px) {
+    .skills .container-4 .row {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+/* Media query for mobile screens (screen width <= 480px) */
+@media (max-width: 480px) {
+    .skills .container-4 .row {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* header {
+    padding: 20px 0; // Adjust padding for better spacing 
+    display: flex;
+    justify-content: space-between; // Space between logo and nav links 
+    align-items: center;
+    flex-wrap: nowrap; // Prevent wrapping 
+    position: fixed; // Keep header at the top
+    top: 0;
+    width: 100%; // Full width
+    z-index: 1000; // Stay above other elements 
+    background-color: #2d283e; // Match your hero-header background 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); // Optional: Add shadow for visibility 
+} 
+    
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span{
+    display: block;
+    background-color: #802bb1;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity; 
+} 
+
+@media(max-width:930px) {
+    nav .togglebtn {
+        display: initial;
+    }
+    .click {
+        top: 45px;
+    }
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2)
+    {
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    nav .navlinks{
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        width: 100vh;
+        background-color: #4c495d;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(45, 40, 62, 0.5);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+
+    nav .navlinks li {
+        display: block;
+    }
+
+    nav .navlinks li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    nav .navlinks.open{
+        right:0;
+
+    }
+}
+
+*/
