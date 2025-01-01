@@ -4,6 +4,6 @@ This repository hosts my personal portfolio website, where you can learn more ab
 
 Visit https://arthigan-j.github.io/.
 
-#Technical Notes
+# Technical Notes
 
 This website is hosted on Github pages.
