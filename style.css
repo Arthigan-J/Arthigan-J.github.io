@@ -563,14 +563,14 @@ textarea:focus{
 /* Media query for tablets (screen width <= 768px) */
 @media (max-width: 768px) {
     .skills .container-4 .row {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
     }
 }
 
 /* Media query for mobile screens (screen width <= 480px) */
 @media (max-width: 480px) {
     .skills .container-4 .row {
-        grid-template-columns: 1fr; /* Single column on very small screens */
+        grid-template-columns: repeat(2, 1fr); /* Two columns even on mobile */
     }
 }
 
@@ -579,6 +579,7 @@ textarea:focus{
         padding: 20px;
     }
     .contact-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Keep this single column if needed for contact-wrapper */
     }
 }
+
