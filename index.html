@@ -85,7 +85,7 @@
                             </a>
                         </div>
                         <div class="card">
-                            <a href="#top" target="_blank" class="btn">
+                            <a href="https://github.com/Arthigan-J/Arthigan-J.github.io" target="_blank" class="btn">
                             <img src="Website Pictures\website.png">
                             <div class="card-content">
                                 <h3>Portfolio Website</h3>
@@ -102,8 +102,8 @@
                             </div>
                             </a>
                         </div>
-                        <div class="card">
-                            <img src="Website Pictures\Full Chess Set.png">
+                        <div class="card CAD">
+                            <img src="Website Pictures\Full Chess Set.png" alt="">
                             <div class="card-content">
                                 <h3>Chess Set</h3>
                                 <p>Developed a 3D model of a complete chess set, with each piece uniquely designed and colored to achieve a realistic appearance in assembly. <strong>(Solidworks)</strong></p>
@@ -111,7 +111,27 @@
                             </a>
                         </div>
                     </div>
+                    <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="Website Pictures\Full Chess Set.png">
+                    </div>
                 </div>
+                <script>
+                    document.querySelectorAll('.card.CAD').forEach(card => { // Select elements with both classes
+                        card.onclick = () => {
+                            const imgSrc = card.querySelector('img').getAttribute('src'); // Get the image source
+                            document.querySelector('.popup-image').style.display = 'block'; // Show the popup
+                            document.querySelector('.popup-image img').src = imgSrc; // Set the popup image source
+                            document.querySelector('header').classList.add('header-inactive'); // Disable header interactions
+                        };
+                    });
+
+                    // Close the popup when the close button (X) is clicked
+                    document.querySelector('.popup-image span').onclick = () => {
+                        document.querySelector('.popup-image').style.display = 'none'; // Hide the popup
+                        document.querySelector('header').classList.remove('header-inactive'); // Re-enable header interactions
+                    };
+                </script>
                 <div class="skills" id="skills">
                     <h1>Skills</h1>
                     <div class="container-4">
