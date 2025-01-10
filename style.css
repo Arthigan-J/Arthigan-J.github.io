@@ -599,6 +599,14 @@ textarea:focus{
     nav .navlinks.open {
         right: 0; /* Slide the menu in */
     }
+
+    .popup-image img {
+        width: 95%; /* Ensure the image is appropriately sized in mobile */
+    }
+
+    .popup-image {
+        z-index: 2001; /* Ensure the popup is above other elements */
+    }
 }
 
 /* Mobile-specific popup styles */
